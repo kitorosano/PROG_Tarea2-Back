@@ -39,13 +39,13 @@ public class EmpleadoController implements IEmpleado {
   }
   
   /**
-   * Metodo que obtiene un empleado registrado en la base de datos a partir de su nombre
-   * @param nombre Nombre del empleado a buscar
+   * Metodo que obtiene un empleado registrado en la base de datos a partir de su correo
+   * @param correo Correo del empleado a buscar
    * @return Optional con el empleado encontrado
    */
   @Override
-  public Optional<Empleado> obtenerEmpleado(String nombre){
-    return empleadoService.findByNombre(nombre);
+  public Optional<Empleado> obtenerEmpleado(String correo){
+    return empleadoService.findByCorreo(correo);
   }
   
   /**
@@ -59,12 +59,12 @@ public class EmpleadoController implements IEmpleado {
   
   /**
    * Metodo que cambiar estado activo de un empleado en la base de datos
-   * @param nombre Nombre del empleado a cambiar estado
-   * @param estado Boolean del nuevo estado del empleado
+   * @param correo Correo del empleado a cambiar estado
+   * @param estado boolean del nuevo estado del empleado
    */
   @Override
-  public void cambiarEstadoEmpleado(String nombre, Boolean estado) {
-    empleadoService.updateEstado(nombre, estado);
+  public void cambiarEstadoEmpleado(String correo, boolean estado) {
+    empleadoService.updateEstado(correo, estado);
   }
   
 }

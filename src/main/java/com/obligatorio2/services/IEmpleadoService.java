@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface IEmpleadoService {
   
   Map<String, Empleado> findAll();
-  Optional<Empleado> findByNombre(String nombre);
+  Optional<Empleado> findByCorreo(String correo);
   void save(Empleado empleado);
-  void updateEstado(String nombre, Boolean estado);
+  void updateEstado(String correo, boolean estado);
 }

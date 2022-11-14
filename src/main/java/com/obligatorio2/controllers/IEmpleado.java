@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IEmpleado {
   Map<String, Empleado> obtenerEmpleados();
-  Optional<Empleado> obtenerEmpleado(String nombre);
+  Optional<Empleado> obtenerEmpleado(String correo);
   void guardarEmpleado(Empleado empleadodto);
-  void cambiarEstadoEmpleado(String nombre, Boolean estado);
+  void cambiarEstadoEmpleado(String correo, boolean estado);
 }

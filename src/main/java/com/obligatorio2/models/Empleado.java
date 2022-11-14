@@ -9,7 +9,7 @@ public class Empleado {
   private LocalDate fechaNacimiento;
   private String correo;
   private String direccion;
-  private Boolean activo = true;
+  private boolean activo;
   
   public Empleado() {
   }
@@ -20,9 +20,10 @@ public class Empleado {
     this.fechaNacimiento = fechaNacimiento;
     this.correo = correo;
     this.direccion = direccion;
+    this.activo = true;
   }
   
-  public Empleado(String nombre, String apellido, LocalDate fechaNacimiento, String correo, String direccion, Boolean activo) {
+  public Empleado(String nombre, String apellido, LocalDate fechaNacimiento, String correo, String direccion, boolean activo) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.fechaNacimiento = fechaNacimiento;
@@ -66,10 +67,10 @@ public class Empleado {
     this.direccion = direccion;
   }
   
-  public Boolean getActivo() {
+  public boolean getActivo() {
     return activo;
   }
-  public void setActivo(Boolean activo) {
+  public void setActivo(boolean activo) {
     this.activo = activo;
   }
   
