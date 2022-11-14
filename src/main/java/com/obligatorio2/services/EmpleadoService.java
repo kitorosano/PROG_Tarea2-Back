@@ -74,7 +74,7 @@ public class EmpleadoService implements IEmpleadoService{
     Optional<Empleado> empleadoExiste = this.findByCorreo(empleado.getCorreo());
     String saveEmpleado;
     if(empleadoExiste.isPresent()) {
-      saveEmpleado = "UPDATE empleados SET nombre = '" + empleado.getNombre() + "', apellido = '" + empleado.getApellido() + "', fecha_nacimiento = '" + empleado.getFechaNacimiento() + "', correo = '" + empleado.getCorreo() + "', direccion = '" + empleado.getDireccion() + "', activo = " + empleado.getActivo() + " WHERE correo = '" + empleado.getCorreo() + "'";
+      saveEmpleado = "UPDATE empleados SET nombre = '" + empleado.getNombre() + "', apellido = '" + empleado.getApellido() + "', fecha_nacimiento = '" + empleado.getFechaNacimiento() + "', direccion = '" + empleado.getDireccion() + "' WHERE correo = '" + empleado.getCorreo() + "'";
     } else {
       saveEmpleado = "INSERT INTO `empleados` (`nombre`, `apellido`, `fecha_nacimiento`, `correo`, `direccion`, `activo`) " +
           "VALUES ('" + empleado.getNombre() + "', '" + empleado.getApellido() + "', '" + empleado.getFechaNacimiento() + "', '" + empleado.getCorreo() + "', '" + empleado.getDireccion() + "', " + empleado.getActivo() + ")";
